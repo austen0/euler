@@ -115,3 +115,6 @@ dmypy.json
 
 # apple bs
 .DS_Store
+
+assets/
+pe[0101-9999].py
