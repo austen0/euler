@@ -115,6 +115,3 @@ dmypy.json
 
 # apple bs
 .DS_Store
-
-assets/
-/problem_[0101-9999].py
