@@ -117,4 +117,4 @@ dmypy.json
 .DS_Store
 
 assets/
-pe[0101-9999].py
+pe[0-9]{4}.py
