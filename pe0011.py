@@ -3,8 +3,7 @@
 #
 # What is the greatest product of four adjacent numbers in the same direction (up, down, left,
 # right, or diagonally) in the 20×20 grid?
-#
-# Answer: 
+
 
 from functools import reduce
 from operator import add, mul
@@ -32,16 +31,16 @@ grid = """\
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48\
 """
 
-grid = grid.split('\n')
+grid = grid.split("\n")
 greatest_product = 0
 matrix = []
 for row in grid:
     matrix.append(list(int(x) for x in row.split()))
-    
+
 # Horizontal
 for row in matrix:
     for i in range(0, 20 - 4):
-        product = reduce(mul, row[i:i + 4])
+        product = reduce(mul, row[i : i + 4])
         if product > greatest_product:
             greatest_product = product
 print(f"Horizontal: {greatest_product}")
@@ -49,7 +48,7 @@ print(f"Horizontal: {greatest_product}")
 # Vertical
 for i in range(0, 20 - 4):
     for j in range(0, 20):
-        product = matrix[i][j]*matrix[i+1][j]*matrix[i+2][j]*matrix[i+3][j]
+        product = matrix[i][j] * matrix[i + 1][j] * matrix[i + 2][j] * matrix[i + 3][j]
         if product > greatest_product:
             greatest_product = product
 print(f"Vertical:   {greatest_product}")
@@ -57,7 +56,12 @@ print(f"Vertical:   {greatest_product}")
 # Diagonal
 for i in range(0, 20 - 4):
     for j in range(0, 20 - 4):
-        product = matrix[i][j]*matrix[i+1][j+1]*matrix[i+2][j+2]*matrix[i+3][j+3]
+        product = (
+            matrix[i][j]
+            * matrix[i + 1][j + 1]
+            * matrix[i + 2][j + 2]
+            * matrix[i + 3][j + 3]
+        )
         if product > greatest_product:
             greatest_product = product
 print(f"Diagonal:   {greatest_product}")

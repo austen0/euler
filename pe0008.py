@@ -2,8 +2,7 @@
 # Problem 8
 #
 # Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.
-#
-# Answer: 23514624000
+
 
 from functools import reduce
 from operator import add, mul

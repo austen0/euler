@@ -2,8 +2,7 @@
 # Problem 9
 #
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.
-#
-# Answer: 31875000
+
 
 a = 1
 go = True
